@@ -2,13 +2,22 @@
 <div>
   <ul class="nav">
     <li class="nav-item">
-      <button class="btn btn-primary btn-lg" role="button" (click)="newDeck()">New</button>
+      <button class="btn btn-outline-primary" role="button" (click)="newDeck()">New</button>
     </li>
     <li class="nav-item">
-      <button class="btn btn-success btn-lg" role="button" (click)="onNewGame()">Game</button>
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-success" id="dropdown" ngbDropdownToggle>Game</button>
+        <div ngbDropdownMenu aria-labelledby="dropdown">
+          <button ngbDropdownItem role="button" (click)="onNewGame('par')">Par</button>
+          <button ngbDropdownItem role="button" (click)="onNewGame('impar')">Impar</button>
+          
+        </div>
+      </div>
+     
     </li>
   </ul>
 </div>   
-  <app-header (newGame)="onNewGame()"></app-header>
-  <app-deck [cards]="cards"></app-deck>
+
+  <app-header></app-header>
+  <app-deck [cards]="cards" [side]="side"></app-deck>
 </ng-container>

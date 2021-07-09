@@ -8,10 +8,9 @@ import { ApiService } from './services/api.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-
-  @Output() newGame = new EventEmitter();
-  
+    
   public cards: Card[] = [];
+  public side: string = '';
   
   constructor(
     private apiService: ApiService
@@ -31,14 +30,11 @@ export class AppComponent implements OnInit {
     window.location.reload();
   }
 
-  onNewGame(){
-    console.log("game");
+  onNewGame(side:string){
     this.apiService
     .getDeckDraw(2)
-    .subscribe(cards =>{ 
-      this.cards = cards.cards,
-      console.log(cards)
-     })
+    .subscribe(cards => this.cards = cards.cards);
+    this.side = side;
   }
 
   
