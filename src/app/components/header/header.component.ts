@@ -9,11 +9,15 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class HeaderComponent implements OnInit {
 
+  @Output() newGame = new EventEmitter();
+
   constructor( ) { }
 
   ngOnInit(): void {
   }
 
- 
+ newDeck() {
+    window.location.reload();
+  }
   
 }

@@ -1,3 +1,20 @@
+<div>
+  <ul class="nav">
+    <li class="nav-item">
+      <button class="btn btn-outline-primary" role="button" (click)="newDeck()">New</button>
+    </li>
+    <li class="nav-item">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-success" id="dropdown" ngbDropdownToggle>Game</button>
+        <div ngbDropdownMenu aria-labelledby="dropdown">
+          <button ngbDropdownItem role="button" (click)="newGame.emit('par')">Par</button>
+          <button ngbDropdownItem role="button" (click)="newGame.emit('impar')">Impar</button>
+      </div>
+      </div>
+    </li>
+  </ul>
+</div>   
+
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
       <h1 class="display-4">Par ou Impar</h1>

@@ -25,16 +25,14 @@ export class AppComponent implements OnInit {
       .getDeckDraw()
       .subscribe((draw) => this.cards = draw.cards);
   }
-    
-  newDeck() {
-    window.location.reload();
-  }
-
+  
   onNewGame(side:string){
     this.apiService
     .getDeckDraw(2)
-    .subscribe(cards => this.cards = cards.cards);
-    this.side = side;
+    .subscribe(cards =>{ this.cards = cards.cards,
+      this.side = side;
+    });
+    
   }
 
   
