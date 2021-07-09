@@ -1,6 +1,5 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Card, Deck } from 'src/app/services/api.models';
-import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-deck',
