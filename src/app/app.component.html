@@ -1,0 +1,14 @@
+<ng-container>
+<div>
+  <ul class="nav">
+    <li class="nav-item">
+      <button class="btn btn-primary btn-lg" role="button" (click)="newDeck()">New</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn btn-success btn-lg" role="button" (click)="onNewGame()">Game</button>
+    </li>
+  </ul>
+</div>   
+  <app-header (newGame)="onNewGame()"></app-header>
+  <app-deck [cards]="cards"></app-deck>
+</ng-container>
