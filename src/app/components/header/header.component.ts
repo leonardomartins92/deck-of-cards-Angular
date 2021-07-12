@@ -1,5 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Card } from 'src/app/services/api.models';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,16 +7,14 @@ import { Card } from 'src/app/services/api.models';
 })
 export class HeaderComponent implements OnInit {
   
-  @Output() newGame = new EventEmitter();
-
-  constructor( ) { }
-
   ngOnInit(): void {
-
+    
   }
 
- newDeck() {
-    window.location.reload();
-  }
+  constructor(){}
+
+  @Input() msg='';
+  @Input() sub='';
+
   
 }

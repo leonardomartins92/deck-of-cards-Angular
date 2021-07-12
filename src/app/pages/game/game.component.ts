@@ -11,7 +11,8 @@ export class GameComponent implements OnInit {
 
   cards: Card[] =[];
   side!: string;
-
+  msg='Soma: Par ou Impar?';
+  sub= 'Figuras valem 0';
   values: number[] = [];
 
   constructor(private apiService:ApiService) { }

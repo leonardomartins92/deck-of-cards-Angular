@@ -11,6 +11,7 @@ import { ApiService } from 'src/app/services/api.service';
 export class CardsComponent implements OnInit {
 
   cards: Card[] =[];
+  msg='Deck of Cards';
   
   constructor(private activatedRoute: ActivatedRoute, private apiService: ApiService) { }
  
@@ -29,5 +30,8 @@ export class CardsComponent implements OnInit {
       .subscribe((draw) => this.cards = draw.cards);
   }
 
+  newDeck() {
+    window.location.reload();
+  }
 
 }

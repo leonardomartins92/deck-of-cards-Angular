@@ -1,8 +1,5 @@
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1 class="display-4">Soma Par ou Impar?</h1>
-      <p class="lead">Figuras valem 0 </p>
-    </div>
+<app-header [msg]="msg" [sub]="sub"></app-header>
+
     <div style="padding-left: 90px;">
         <ul class="nav">
           <li class="nav-item">
@@ -12,7 +9,7 @@
          
         </ul>
       </div>   
-    </div>
+   
     <div class="container-fluid">
         <div class="row">
             <div class="col mb-5" *ngFor="let card of cards">

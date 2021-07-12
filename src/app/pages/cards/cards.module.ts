@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { CardsComponent } from './cards.component';
 import { CardsRoutingModule } from './cards.routing';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AppModule } from 'src/app/app.module';
+import { HeaderModule } from 'src/app/components/header/header.module';
 
 
 @NgModule({
@@ -13,7 +15,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     CommonModule,
     CardsRoutingModule,
-    NgbModule
+    NgbModule,
+    HeaderModule
   ]
 })
 export class CardsModule { }

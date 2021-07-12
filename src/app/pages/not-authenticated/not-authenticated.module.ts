@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NotAuthenticatedComponent } from './not-authenticated.component';
 import { NotAuthenticatedRoutingModule } from './not-authenticated.routing';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HeaderModule } from 'src/app/components/header/header.module';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     NotAuthenticatedRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HeaderModule
   ]
 })
 export class NotAuthenticatedModule { }

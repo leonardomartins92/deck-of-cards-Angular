@@ -14,6 +14,9 @@ export class NotAuthenticatedComponent implements OnInit {
     password: ''
   });
 
+  msg='Usuário não autenticado';
+  sub='Não possui permissão de ver página';
+
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {

@@ -1,9 +1,6 @@
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1 class="display-4">Usuário não autenticado</h1>
-      <p>Não possui permissão de ver página</p>
-     </div>
-</div>
+<app-header [msg]="msg" [sub]="sub"></app-header>
+
+
 <div class="form-group">
 <form [formGroup]="authForm" (ngSubmit)="onSubmit()">
     <div>
