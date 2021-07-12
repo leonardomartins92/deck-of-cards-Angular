@@ -1,0 +1,26 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Deck of Cards</h1>
+      
+    </div>
+</div>
+
+<div>
+    <ul class="nav">
+      <li class="nav-item">
+        <button class="btn btn-outline-primary" role="button" (click)="deckDraw()">New</button>
+      </li>
+      
+    </ul>
+  </div>   
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            Deck Id: {{deckId}}
+        </div>
+        <div class="col mb-5" *ngFor="let card of cards">
+            <img [src]="card.image" />
+        </div>
+    </div>
+</div>

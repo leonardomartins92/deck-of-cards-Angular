@@ -1,0 +1,23 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Soma Par ou Impar?</h1>
+      <p class="lead">Figuras valem 0 </p>
+    </div>
+    <div style="padding-left: 90px;">
+        <ul class="nav">
+          <li class="nav-item">
+            <button class="btn btn-outline-primary" role="button" (click)="onNewGame('par')">Par</button>
+            <button class="btn btn-outline-success" role="button" (click)="onNewGame('impar')">Impar</button>
+          </li>
+         
+        </ul>
+      </div>   
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col mb-5" *ngFor="let card of cards">
+                <img [src]="card.image" />
+            </div>
+        </div>
+    </div>
+

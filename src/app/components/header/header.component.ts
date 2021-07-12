@@ -1,6 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Card, Deck, Draw } from 'src/app/services/api.models';
-import { ApiService } from 'src/app/services/api.service';
+import { Card } from 'src/app/services/api.models';
 
 @Component({
   selector: 'app-header',
@@ -8,12 +7,13 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  
   @Output() newGame = new EventEmitter();
 
   constructor( ) { }
 
   ngOnInit(): void {
+
   }
 
  newDeck() {

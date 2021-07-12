@@ -13,8 +13,8 @@ export class ApiService {
     private httpClient: HttpClient
   ) { }
 
-  getDeckDraw( numberOfCards: number = 8): Observable<Draw> {
-    return this.httpClient.get<Draw>(`${environment.apiUrl}/deck/new/draw/?count=${numberOfCards}`);
+  getDeckDraw(deckId: string = "new", numberOfCards: number = 5): Observable<Draw> {
+    return this.httpClient.get<Draw>(`${environment.apiUrl}/deck/${deckId}/draw/?count=${numberOfCards}`);
   }
   postDeck() {
     return this.httpClient.get<Deck>(`${environment.apiUrl}/deck/new?jokers_enabled=true`, {});

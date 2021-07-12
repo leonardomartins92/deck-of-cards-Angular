@@ -7,21 +7,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './components/header/header.component';
-import { DeckComponent } from './components/deck/deck.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { AppGuard } from './app.guard';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    DeckComponent
+    PageNotFoundComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [AppGuard],
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }
